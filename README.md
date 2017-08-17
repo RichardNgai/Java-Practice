@@ -1,2 +1,3 @@
 # Java-Practice
-Practice with Java
+Practice with Java using HackerRank lessons
+
