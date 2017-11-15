@@ -1,0 +1,24 @@
+public class selectionSort {	
+
+	public static void sortArrLowestToHighest(int[] arr ) {
+		for(int pivot = 0; pivot < arr.length-1; pivot++) {
+			int lowPosition = pivot;           //sets initial lowest index to the 1st index 
+			for(int j = pivot+ 1; j < arr.length; j++) {				
+				if(arr[lowPosition] > arr[j]) {//if the value at lowPosition is higher than at j,   
+					lowPosition = j;           //replace the index of the lowest one with j
+				}				
+			}
+			int temp = arr[pivot];        	   //temporarily store the value of pivot in temp
+			arr[pivot] = arr[lowPosition];     //change the value of pivot to the value at lowPosition			
+			arr[lowPosition] = temp; 		   //set the lowPosition value to original pivot
+		}
+	}
+	
+	public static void printArray(int[] arr) {
+		for( int i : arr) {
+			System.out.print(i + ", ");
+		}
+		System.out.println();
+	}
+	
+}
