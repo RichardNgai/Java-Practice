@@ -9,3 +9,17 @@ public boolean scoresIncreasing(int[] scores)
   }
   return true;
 }
+//Alternate method
+public boolean scoresIncreasing(int[] scores) {
+  int numGreater = 0;
+  for (int i = 1; i < scores.length; i++) {
+    if (scores[i] >= scores[i-1]) {
+      numGreater++;
+    }
+  }
+  if(numGreater == scores.length-1) {
+    return true;
+  } else {
+    return false;
+  }
+}
